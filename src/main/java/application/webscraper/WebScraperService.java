@@ -66,7 +66,7 @@ public class WebScraperService {
 				content.getElementById("bodyContent").getElementsByClass(TABLE_OF_CONTENTS_CLASS).remove();
 				content.getElementById("bodyContent").getElementById(WIKIPEDIA_SITE_SUB_ID).remove();
 
-				ScrapedPage page = new ScrapedPage(wikiPage.replace("/wiki/", "").replace("/", "_"), content.text()
+				ScrapedPage page = new ScrapedPage(wikiPage.replace("/wiki/", "").replace("/", "057"), content.text()
 						.toLowerCase()
 						.replaceAll("[^a-zA-Z0-9]", " ")
 						.replaceAll(" +", " "));
@@ -75,7 +75,7 @@ public class WebScraperService {
 
 				categoryPages.add(page);
 
-				System.out.println("Iteration : " + i + " Successfully scraped: " + page.getPage());
+				System.out.println("Iteration : " + i + 1 + " Successfully scraped: " + page.getPage());
 			}
 
 		} catch (Exception e){
@@ -90,7 +90,7 @@ public class WebScraperService {
 		int size = unscrapedPages.size();
 
 		if(size == 0){
-			throw new RuntimeException("Did not find enough links to scrape 200 pages.");
+			throw new RuntimeException("Did not find enough outgoing links to scrape 200 pages.");
 		}
 
 		Random rng = new Random();
