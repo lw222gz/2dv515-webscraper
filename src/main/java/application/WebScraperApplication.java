@@ -32,11 +32,6 @@ public class WebScraperApplication {
 		String category = System.getProperty("category");
 		String datasetDirectory = System.getProperty("dataset.dir");
 
-		System.out.println("Here");
-		System.out.println(rootPage);
-		System.out.println(category);
-		System.out.println(datasetDirectory);
-
 		if(isNull(rootPage)){
 			throw new RuntimeException("Missing a root page.");
 		}

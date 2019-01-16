@@ -75,7 +75,7 @@ public class WebScraperService {
 
 				categoryPages.add(page);
 
-				System.out.println("Iteration : " + i + 1 + " Successfully scraped: " + page.getPage());
+				System.out.println("Iteration : " + (i + 1) + " Successfully scraped: " + page.getPage());
 			}
 
 		} catch (Exception e){
