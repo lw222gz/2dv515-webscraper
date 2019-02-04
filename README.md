@@ -27,4 +27,5 @@ The application is a spring-boot application and requires 3 parameters to be pas
 - dataset.dir
   - The directory where you want the dataset to be stored. This directory needs to already exist.
 
+#### Example execution:
 mvn spring-boot:run -Droot.page=/wiki/Ocean -Dcategory=Oceanic -Ddataset.dir=/my/dataset/dir/
